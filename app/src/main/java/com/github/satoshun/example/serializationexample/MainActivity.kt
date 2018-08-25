@@ -3,6 +3,7 @@ package com.github.satoshun.example.serializationexample
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.GsonBuilder
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
@@ -14,9 +15,12 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
 
+    val gson = GsonBuilder()
+        .create()
+
     val retrofit = Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .addConverterFactory(GsonConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .baseUrl("https://api.github.com/")
         .build()
 
@@ -27,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         .subscribe(
             {
               Log.d("Result", it.toString())
+
+//              Log.d("Hoge", it.hoge.toString())
             },
             {
               Log.e("Error", it.message)

@@ -5,7 +5,11 @@ import com.google.gson.annotations.SerializedName
 data class Result(
   @SerializedName("total_count") val totalCount: Int,
   @SerializedName("incomplete_results") val incompleteResults: Boolean,
-  @SerializedName("items") val items: List<User>
+  @SerializedName("items") val items: List<User>,
+
+  // NPE error when this field is access
+  // gson ignore kotlin default value cuz constructor never execute
+  @SerializedName("hoge") val hoge: List<User> = emptyList()
 )
 
 data class User(
