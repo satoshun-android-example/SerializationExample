@@ -53,6 +53,7 @@ object Libs {
 
   val gson = "com.google.code.gson:gson:2.8.5"
   val moshi = "com.squareup.moshi:moshi:1.6.0"
+  val moshi_codegen = "com.squareup.moshi:moshi-kotlin-codegen:1.6.0"
   val kotlin_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.6.1"
 
   val retrofit = "com.squareup.retrofit2:retrofit:2.4.0"
