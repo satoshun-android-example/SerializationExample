@@ -1,26 +1,27 @@
-package com.github.satoshun.example.serializationexample
+package com.github.satoshun.example.serializationexample.moshi
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.GsonBuilder
+import com.github.satoshun.example.serializationexample.GitHub
+import com.github.satoshun.example.serializationexample.create
+import com.squareup.moshi.Moshi
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 
-class MainActivity : AppCompatActivity() {
+class MoshiMainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
 
-    val gson = GsonBuilder()
-        .create()
+    Moshi.Builder()
 
     val retrofit = Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .addConverterFactory(GsonConverterFactory.create(gson))
+        .addConverterFactory(MoshiConverterFactory.create())
         .baseUrl("https://api.github.com/")
         .build()
 
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity() {
             {
               Log.d("Result", it.toString())
 
-//              Log.d("Hoge", it.hoge.toString())
+              // use default value
+              Log.d("Hoge", it.hoge.toString())
             },
             {
               Log.e("Error", it.message)
@@ -40,5 +42,3 @@ class MainActivity : AppCompatActivity() {
         )
   }
 }
-
-inline fun <reified T> Retrofit.create(): T = create(T::class.java)
