@@ -11,6 +11,7 @@ object Vers {
 object Libs {
   val android_plugin = "com.android.tools.build:gradle:3.2.0-rc02"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
+  val kotlin_serialization_plugin = "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:0.6.1"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -62,6 +63,8 @@ object Libs {
   val retrofit_kotlin_serialization = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.0.1"
 
   val retrofit_rxjava = "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+
+  val okhttp = "com.squareup.okhttp3:okhttp:3.11.0"
 
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"

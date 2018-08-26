@@ -4,10 +4,12 @@ buildscript {
   repositories {
     google()
     jcenter()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
   }
   dependencies {
     classpath Libs.android_plugin
     classpath Libs.kotlin_plugin
+    classpath Libs.kotlin_serialization_plugin
   }
 }
 
@@ -15,6 +17,7 @@ allprojects {
   repositories {
     google()
     jcenter()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
   }
 }
 
