@@ -12,7 +12,7 @@ data class Result(
 )
 
 @JsonClass(generateAdapter = true)
-data class User(
+class User(
   @Json(name = "login") val login: String,
   @Json(name = "id") val id: Long,
   @Json(name = "url") val url: String,
