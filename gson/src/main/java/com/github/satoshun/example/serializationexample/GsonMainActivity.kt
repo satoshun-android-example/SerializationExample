@@ -33,6 +33,7 @@ class GsonMainActivity : AppCompatActivity() {
               Log.d("Result", it.toString())
 
 //              Log.d("Hoge", it.hoge.toString())
+                            Log.d("Hoge2", it.hoge2.toString())
             },
             {
               Log.e("Error", it.message)

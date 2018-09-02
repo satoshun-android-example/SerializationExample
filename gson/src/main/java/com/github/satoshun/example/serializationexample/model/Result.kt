@@ -7,10 +7,14 @@ data class Result(
   @SerializedName("incomplete_results") val incompleteResults: Boolean,
   @SerializedName("items") val items: List<User>,
 
+    // NPE error when this field is access
+    // gson ignore kotlin default value cuz constructor never execute
+  @SerializedName("hoge") val hoge: List<User> = emptyList()
+) {
   // NPE error when this field is access
   // gson ignore kotlin default value cuz constructor never execute
-  @SerializedName("hoge") val hoge: List<User> = emptyList()
-)
+  @SerializedName("hoge2") val hoge2: List<User> = emptyList()
+}
 
 data class User(
   @SerializedName("login") val login: String,
