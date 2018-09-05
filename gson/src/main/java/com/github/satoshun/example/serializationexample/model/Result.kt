@@ -1,5 +1,6 @@
 package com.github.satoshun.example.serializationexample.model
 
+import com.github.satoshun.example.serializationexample.Score
 import com.google.gson.annotations.SerializedName
 
 data class Result(
@@ -26,5 +27,5 @@ data class User(
   @SerializedName("starred_url") val starredUrl: String,
   @SerializedName("gists_url") val gistsUrl: String,
   @SerializedName("type") val type: String,
-  @SerializedName("score") val score: Float
+  @SerializedName("score") val score: Score
 )
