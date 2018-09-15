@@ -9,7 +9,7 @@ object Vers {
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc02"
+  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc03"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val kotlin_serialization_plugin = "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:0.6.1"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
@@ -31,7 +31,7 @@ object Libs {
   val webkit = "androidx.webkit:webkit:1.0.0-rc01"
   val media2 = "androidx.media2:media2:1.0.0-alpha02"
 
-  val material = "com.google.android.material:material:1.0.0-rc01"
+  val material = "com.google.android.material:material:1.0.0-rc02"
   val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
   val browser = "androidx.browser:browser:1.0.0-rc01"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha05"

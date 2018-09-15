@@ -44,6 +44,8 @@ class GsonMainActivity : AppCompatActivity() {
               Log.e("Error", it.message)
             }
         )
+
+    testGsonOptional()
   }
 }
 
