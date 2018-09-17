@@ -46,6 +46,7 @@ class GsonMainActivity : AppCompatActivity() {
         )
 
     testGsonOptional()
+    testPolymorphic()
   }
 }
 

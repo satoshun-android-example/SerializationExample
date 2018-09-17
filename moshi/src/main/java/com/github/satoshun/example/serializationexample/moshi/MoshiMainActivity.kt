@@ -40,5 +40,6 @@ class MoshiMainActivity : AppCompatActivity() {
               Log.e("Error", it.message)
             }
         )
+    testMoshi()
   }
 }

@@ -13,6 +13,10 @@ fun testGsonOptional() {
   // nickname is nickname, consider default value
   val g2 = gson.fromJson<User2>("{}", User2::class.java)
   Log.d("user2", g2.nickname.toString())
+
+  // nickname is nickname, consider default value
+  val g3 = gson.fromJson<User3>("{}", User3::class.java)
+  Log.d("user3", g3.nickname.toString())
 }
 
 data class User1(
@@ -26,3 +30,10 @@ class User2(
   val age: Int = 10,
   val height: Int = 150
 )
+
+class User3 {
+  val nickname: String? = "nickname"
+  val age: Int = 10
+  lateinit var height: String
+    private set
+}

@@ -46,5 +46,7 @@ class KtSerializationMainActivity : AppCompatActivity() {
               Log.e("Error", it.message)
             }
         )
+
+    testKtSerialization()
   }
 }
