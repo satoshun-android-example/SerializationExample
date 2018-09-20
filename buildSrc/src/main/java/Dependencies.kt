@@ -3,7 +3,7 @@ object Vers {
   val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.2.61"
+  val kotlin = "1.3.0-rc-54"
   val couroutine = "0.25.0"
   val ktlint = "0.24.0"
 }
@@ -11,7 +11,7 @@ object Vers {
 object Libs {
   val android_plugin = "com.android.tools.build:gradle:3.2.0-rc03"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
-  val kotlin_serialization_plugin = "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:0.6.1"
+  val kotlin_serialization_plugin = "org.jetbrains.kotlin:kotlin-serialization:${Vers.kotlin}"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -55,7 +55,7 @@ object Libs {
   val gson = "com.google.code.gson:gson:2.8.5"
   val moshi = "com.squareup.moshi:moshi:1.6.0"
   val moshi_codegen = "com.squareup.moshi:moshi-kotlin-codegen:1.6.0"
-  val kotlin_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.6.1"
+  val kotlin_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.8.0-rc13"
 
   val retrofit = "com.squareup.retrofit2:retrofit:2.4.0"
   val retrofit_gson = "com.squareup.retrofit2:converter-gson:2.4.0"

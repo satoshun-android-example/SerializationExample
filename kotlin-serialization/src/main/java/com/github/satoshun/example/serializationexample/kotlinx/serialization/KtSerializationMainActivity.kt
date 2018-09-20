@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.github.satoshun.example.serializationexample.GitHub
 import com.github.satoshun.example.serializationexample.create
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.stringBased
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.stringBased2
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.serialization.json.JSON
@@ -22,7 +22,7 @@ class KtSerializationMainActivity : AppCompatActivity() {
     val retrofit = Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .addConverterFactory(
-            stringBased(
+            stringBased2(
                 MediaType.parse("application/json")!!,
                 json::parse,
                 json::stringify

@@ -5,11 +5,13 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class Result(
-  @Json(name = "total_count") val totalCount: Int,
+  @Json(name = "total_count") val totalCount: Count,
   @Json(name = "incomplete_results") val incompleteResults: Boolean,
   @Json(name = "items") val items: List<User>,
   @Json(name = "hoge") val hoge: List<User> = emptyList()
 )
+
+inline class Count(val count: Int)
 
 @JsonClass(generateAdapter = true)
 class User(
