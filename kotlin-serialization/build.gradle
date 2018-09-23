@@ -31,7 +31,7 @@ dependencies {
   implementation Libs.kotlin_serialization
 
   implementation Libs.retrofit
-//  implementation Libs.retrofit_kotlin_serialization
+  implementation Libs.retrofit_kotlin_serialization
 
   implementation Libs.retrofit_rxjava
 
