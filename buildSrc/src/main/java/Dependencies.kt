@@ -3,8 +3,9 @@ object Vers {
   val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.3.0-rc-54"
+  val kotlin = "1.3.0-rc-57"
   val couroutine = "0.26.1"
+  val ktlint = "0.24.0"
 }
 
 object Libs {

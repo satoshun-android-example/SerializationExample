@@ -6,6 +6,7 @@ buildscript {
     jcenter()
     maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
     maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
   }
   dependencies {
     classpath Libs.android_plugin
@@ -20,6 +21,7 @@ allprojects {
     jcenter()
     maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
     maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
   }
 }
 
