@@ -3,16 +3,14 @@ package com.github.satoshun.example.serializationexample
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.github.satoshun.example.serializationexample.model.ScoreJsonDeserializer
 import com.google.gson.GsonBuilder
-import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
-import com.google.gson.JsonElement
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.reflect.Type
 
 class GsonMainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,18 +45,8 @@ class GsonMainActivity : AppCompatActivity() {
 
     testGsonOptional()
     testPolymorphic()
-  }
-}
-
-data class Score(val score: Float)
-
-class ScoreJsonDeserializer : JsonDeserializer<Score> {
-  override fun deserialize(
-    json: JsonElement,
-    typeOfT: Type?,
-    context: JsonDeserializationContext?
-  ): Score {
-    return Score(json.asFloat)
+    testAutoboxingPerformance()
+    testInstance()
   }
 }
 

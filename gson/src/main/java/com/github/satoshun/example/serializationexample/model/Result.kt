@@ -1,7 +1,10 @@
 package com.github.satoshun.example.serializationexample.model
 
-import com.github.satoshun.example.serializationexample.Score
+import com.google.gson.JsonDeserializationContext
+import com.google.gson.JsonDeserializer
+import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
+import java.lang.reflect.Type
 
 data class Result(
   @SerializedName("total_count") val totalCount: Int,
@@ -29,3 +32,15 @@ data class User(
   @SerializedName("type") val type: String,
   @SerializedName("score") val score: Score
 )
+
+data class Score(val score: Float)
+
+class ScoreJsonDeserializer : JsonDeserializer<Score> {
+  override fun deserialize(
+    json: JsonElement,
+    typeOfT: Type?,
+    context: JsonDeserializationContext?
+  ): Score {
+    return Score(json.asFloat)
+  }
+}
