@@ -3,15 +3,14 @@ object Vers {
   val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.3.0-rc-54"
+  val kotlin = "1.3.0-rc-57"
   val couroutine = "0.26.1"
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc03"
+  val android_plugin = "com.android.tools.build:gradle:3.2.0"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val kotlin_serialization_plugin = "org.jetbrains.kotlin:kotlin-serialization:${Vers.kotlin}"
-  val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
